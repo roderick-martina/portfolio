@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import {sneakerapp, foodspot, crypto} from '../content/portfolio'
+import {workExperience, education} from '../content/resume'
 import Card from '../components/Card'
+import Stroke from '../components/Stroke'
+import ResumeBlock from '../components/ResumeBlock'
 
 const Home = () => {
   return (
@@ -25,11 +28,14 @@ const Home = () => {
             <img src="/waving.gif" alt="waving gif" />
           </div>
           <div className="w-full mt-4">
-            <h2 className="lg:w-2/5 lg:mx-0 sm:w-5/6 sm:mx-auto font-bold text-4xl">
+            <h2 className="lg:w-2/5 lg:mx-0 sm:w-5/6 sm:mx-auto font-bold text-4xl text-black">
               Hoi, mijn naam is Rick. Ik ben een fullstack developer en HBO-ICT
               student.
             </h2>
-            <p className="lg:w-3/5 lg:mx-0 sm:w-5/6 sm:mx-auto mt-4 font-medium text-xl">
+            <p
+              className="lg:w-3/5 lg:mx-0 sm:w-5/6 sm:mx-auto mt-4 font-medium text-xl"
+              style={{color: '#3f4451'}}
+            >
               Mijn passie ligt bij het ontwikkelen van websites, en mobile
               applicaties. Op dit moment volg ik een HBO-ICT studie aan de
               Haagse hogeschool in Zoetermeer. Naast het studeren ben ik bezig
@@ -44,6 +50,28 @@ const Home = () => {
           >
             Download CV
           </a>
+        </div>
+      </div>
+      <div className={`mt-24`}>
+        <div>
+          <h3 className={`text-3xl font-bold leading-none`}>Résumé</h3>
+          <div className="-mt-2">
+            <Stroke width="116" color="#D7DDFF" />
+          </div>
+          <div className="flex justify-between mt-10">
+            <ResumeBlock
+              title="Werkervaring"
+              width="188"
+              color="#D0EAEC"
+              list={workExperience}
+            />
+            <ResumeBlock
+              title="Opleiding"
+              width="140"
+              color="#FFE0D7"
+              list={education}
+            />
+          </div>
         </div>
       </div>
       <div className="flex flex-wrap w-full mt-10 ml-0 sm:px-0 animated animatedFadeInUp fadeInUp">
