@@ -3,7 +3,7 @@ import Stroke from './Stroke'
 
 const ResumeBlock = ({title, width, color, list, children}) => {
   return (
-    <div className="w-1/2">
+    <div className="w-full sm:w-1/2">
       <div>
         <h4 className="font-bold text-3xl leading-none">{title}</h4>
         <div className="-mt-1">
@@ -11,7 +11,7 @@ const ResumeBlock = ({title, width, color, list, children}) => {
         </div>
         <ul className="mt-10 space-y-10">
           {list.map(item => (
-            <li>
+            <li className="w-full sm:w-1/2">
               <a
                 href={item.link}
                 target="_blank"

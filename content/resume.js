@@ -20,4 +20,10 @@ export const education = [
     job: 'Applicatieontwikkelaar',
     period: '2011 - 2016',
   },
+  {
+    title: 'Oranje Nassau College,',
+    link: 'https://clauslaan.onc.nl/clauslaan/',
+    job: 'Vmbo Handel & Administratie',
+    period: '2007 - 2011',
+  },
 ]

@@ -52,13 +52,13 @@ const Home = () => {
           </a>
         </div>
       </div>
-      <div className={`mt-24`}>
+      <div className={`mt-20 sm:mt-24 px-4 sm:px-0`}>
         <div>
           <h3 className={`text-3xl font-bold leading-none`}>Résumé</h3>
           <div className="-mt-2">
             <Stroke width="116" color="#D7DDFF" />
           </div>
-          <div className="flex justify-between mt-10">
+          <div className="flex flex-col sm:flex-row sm:justify-between space-y-10 sm:space-y-0 mt-10">
             <ResumeBlock
               title="Werkervaring"
               width="188"
