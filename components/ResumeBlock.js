@@ -1,4 +1,5 @@
 import React from 'react'
+import {motion} from 'framer-motion'
 import Stroke from './Stroke'
 
 const ResumeBlock = ({title, width, color, list, children}) => {
@@ -7,12 +8,13 @@ const ResumeBlock = ({title, width, color, list, children}) => {
       <div>
         <h4 className="font-bold text-3xl leading-none">{title}</h4>
         <div className="-mt-1">
-          <Stroke width="188" color={color} />
+          <Stroke width={width} color={color} />
         </div>
         <ul className="mt-10 space-y-10">
           {list.map(item => (
             <li className="w-full sm:w-1/2">
-              <a
+              <motion.a
+                whileHover={{x: '4px', y: '-4px'}}
                 href={item.link}
                 target="_blank"
                 className="flex flex-col space-y-2"
@@ -37,7 +39,7 @@ const ResumeBlock = ({title, width, color, list, children}) => {
 
                 <p className="text-lg font-semibold">{item.job}</p>
                 <p className="text-lg">{item.period}</p>
-              </a>
+              </motion.a>
             </li>
           ))}
         </ul>

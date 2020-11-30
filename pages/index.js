@@ -4,6 +4,7 @@ import {workExperience, education} from '../content/resume'
 import Card from '../components/Card'
 import Stroke from '../components/Stroke'
 import ResumeBlock from '../components/ResumeBlock'
+import PortfolioBlock from '../components/PortfolioBlock'
 
 const Home = () => {
   return (
@@ -29,7 +30,7 @@ const Home = () => {
           </div>
           <div className="w-full mt-4">
             <h2 className="lg:w-2/5 lg:mx-0 sm:w-5/6 sm:mx-auto font-bold text-4xl text-black">
-              Hoi, mijn naam is Rick. Ik ben een fullstack developer en HBO-ICT
+              Hoi, mijn naam is Rick. Ik ben een full-stack developer en HBO-ICT
               student.
             </h2>
             <p
@@ -38,7 +39,7 @@ const Home = () => {
             >
               Mijn passie ligt bij het ontwikkelen van websites, en mobile
               applicaties. Op dit moment volg ik een HBO-ICT studie aan de
-              Haagse hogeschool in Zoetermeer. Naast het studeren ben ik bezig
+              Haagse Hogeschool in Zoetermeer. Naast het studeren ben ik bezig
               met het ontwikkelen van een webapplicatie die sneaker liefhebbers
               het gemakkelijk moet maken hun favoriete schoen te vinden.
             </p>
@@ -46,13 +47,24 @@ const Home = () => {
           <a
             href="/cv.pdf"
             download={true}
-            className="mt-4 sm:ml-8 lg:ml-0 font-medium text-xl sm:border-primary text-primary border-b-2  focus:outline-none hover:border-b-2 lg:border-primary pb-1"
+            className="mt-4 sm:ml-8 lg:ml-0 font-semibold text-xl sm:border-primary border-b-2  focus:outline-none hover:border-b-2 lg:border-primary pb-1"
           >
             Download CV
           </a>
         </div>
       </div>
       <div className={`mt-20 sm:mt-24 px-4 sm:px-0`}>
+        <div>
+          <h3 className={`text-3xl font-bold leading-none`}>Project</h3>
+          <div className="-mt-1">
+            <Stroke width="104" color="#D0EAEC" />
+          </div>
+          <div className="flex flex-col sm:flex-row sm:justify-between space-y-10 sm:space-y-0 mt-10">
+            <PortfolioBlock item={sneakerapp} color="#D0EAEC" />
+          </div>
+        </div>
+      </div>
+      <div className={`mt-20 sm:my-24 px-4 sm:px-0`}>
         <div>
           <h3 className={`text-3xl font-bold leading-none`}>Résumé</h3>
           <div className="-mt-2">
@@ -72,55 +84,64 @@ const Home = () => {
               list={education}
             />
           </div>
-        </div>
-      </div>
-      <div className="flex flex-wrap w-full mt-10 ml-0 sm:px-0 animated animatedFadeInUp fadeInUp">
-        <div className="px-4 sm:px-0">
-          <h3 className="text-3xl lg:w-4/5 lg:mx-0 sm:w-5/6 sm:mx-auto">
-            Portfolio
-          </h3>
-          <p className="font-medium mt-4 text-xl sm:w-5/6 sm:mx-auto lg:w-4/5 lg:mx-0">
-            Mijn portfolio bestaat uit fictieve en non fictieve applicaties die
-            uiteindelijk gelanceerd zullen worden. De fictieve applicaties zijn
-            gemaakt om de nieuwste technieken te leren toepassen.
-          </p>
-        </div>
-        <div className="w-full flex flex-wrap mt-4 p-4 sm:px-0">
-          <Card item={sneakerapp} className="pr-0 sm:pr-3">
-            <p>
-              Ik wilde een keer een sneaker bestellen maar kon hem op geen
-              enkele website vinden, na een uur te hebben gegoogeld had ik de
-              sneaker uiteindelijk gevonden. De volgende dag bedacht ik me of
-              een applicatie kon maken waarbij je de meeste sneaker winkels
-              samenbrengt, waardoor je niet uren hoeft te googelen. De
-              applicatie back-end wordt gemaakt in Laravel en voor de front-end
-              zal uiteindelijk gebruik worden gemaakt van Next-js.
-            </p>
-          </Card>
-          <Card item={foodspot} className="pl-0 sm:pl-3">
-            <p>
-              Voor mijn studie heb ik een research minor gevolgd waarbij ik
-              onderzoek moest doen op gebied van IT gebruik in de gezondheid
-              sector. De Haagse Hogeschool heeft een gezondheid onderzoekslab
-              waar studenten en bedrijven worden gemeten genaamd de Healthlab.
-              Het probleem wat de product owner ervaarde was dat er geen
-              centrale plek was waar zij in één opslag alle data van patiënten
-              kon inzien. Hiervoor heb ik webapplicatie gemaakt waarbij docenten
-              en studenten data kunnen importeren van twee medische aparaten
-              waar zij gebruik van maken. De applicatie back-end is gemaakt in
-              Laravel en Front-end met Nuxtjs.
-            </p>
-          </Card>
-          <Card item={crypto}>
-            <p>
-              Na het zien van een fictieve webapplicatie genaamd Comparecrypto
-              van Glen Gijsbert, wou ik me zelf uitdagen om een soortgelijke
-              applicatie te maken, waarbij een gebruiker één opslag bitcoin
-              koersen kan inzien en opzoeken. De webapplicatie is gemaakt met
-              Vuejs en maakt gebruik van de cryptocompare.com api.
-            </p>
-          </Card>
-          <div className="lg:w-1/2 sm:w-5/6 sm:mx-auto bg-transparent rounded lg:mr-4"></div>
+          <div className={`mt-20 sm:my-24 mb-4`}>
+            <div>
+              <h3 className={`text-3xl font-bold leading-none`}>
+                Vaardigheden
+              </h3>
+              <div className="-mt-0">
+                <Stroke width="196" color="#D0EAEC" />
+              </div>
+              <div className="flex flex-col sm:flex-row sm:justify-between space-y-10 sm:space-y-0 mt-10">
+                <div className="w-full sm:w-1/3">
+                  <h4 className="font-bold text-2xl leading-none">
+                    Programeertalen
+                  </h4>
+                  <ul className="mt-4 space-y-3 text-lg font-medium">
+                    <li>
+                      <p>PHP</p>
+                    </li>
+                    <li>
+                      <p>C#</p>
+                    </li>
+                    <li>
+                      <p>Javascript (scripttaal)</p>
+                    </li>
+                  </ul>
+                </div>
+                <div className="w-full sm:w-1/3">
+                  <h4 className="font-bold text-2xl leading-none">
+                    Frameworks
+                  </h4>
+                  <ul className="mt-4 space-y-3 text-lg font-medium">
+                    <li>
+                      <p>Laravel</p>
+                    </li>
+                    <li>
+                      <p>React</p>
+                    </li>
+                    <li>
+                      <p>Vue.js</p>
+                    </li>
+                  </ul>
+                </div>
+                <div className="w-full sm:w-1/3">
+                  <h4 className="font-bold text-2xl leading-none">Kennis</h4>
+                  <ul className="mt-4 space-y-3 text-lg font-medium">
+                    <li>
+                      <p>REST</p>
+                    </li>
+                    <li>
+                      <p>Graphql</p>
+                    </li>
+                    <li>
+                      <p>Elasticsearch</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
